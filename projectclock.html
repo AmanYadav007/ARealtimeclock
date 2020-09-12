@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+ <title>The Clock</title>
+ <script>
+   let a;
+   let date;
+   let time;
+   const options = {weekday: 'long', year:'numeric', month: 'long', day: 'numeric'};
+   setInterval(() => {
+   a = new Date();
+   date = a.toLocaleDateString(undefined,options);
+   time = a.getHours() + ":" + a.getMinutes() + ":" + a.getSeconds()
+   document.getElementById('time').innerHTML = time + "<br> On " + date;
+  },1000);
+ </script>
+  </head>
+  <body>
+    <style>
+      body{
+        background-image: url("bg1.png");
+        background-repeat: no-repeat;
+        background-size: 100%;
+
+      }
+      .headne{
+        color: white;
+        margin: 10px 313px;
+        padding-left: 360px;
+        border-top: 5px solid rgb(0, 0, 0);
+        border-bottom: 5px solid rgb(255, 255, 255);
+        cursor: pointer;
+      }
+      .headne:hover{
+        color: black;
+        margin: 15px 313px;
+        padding-left: 360px;
+        border-top: 0px solid rgb(0, 0, 0);
+        border-bottom: 0px solid rgb(255, 255, 255);
+        border-left: 5px solid white;
+       border-right: 5px solid black;
+      cursor: pointer;
+      transition: ease-out;
+      }
+      .jumbotron{
+        border: 2px solid white;
+        border-radius: 20px;
+        background-image: url("mainbg.jpg");  
+        background-size: 136% 218%;
+        background-repeat: no-repeat;
+        color: cornsilk;
+        margin:10px 250px;
+        padding: 25px 30px ;
+      }
+      .jumbotron:hover{
+        background-image: url("mainbg.jpg");
+        background-size: 130% 210%;
+        color: rgb(9, 255, 0);
+        transition: ease-in-out;
+      }
+      .foot{
+        border: 2px solid black;
+        border-radius: 5px;
+        margin:140px 10px 0px 10px;
+        background-color: rgb(70, 70, 70);
+        color: white;
+      }
+      nav{
+        
+      }
+    
+    </style>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Clock</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">More-Projects</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Dropdown
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+    <h1 class="headne">The Clock </h1>
+    <div class="jumbotron">
+      <h1 class="display-4">Current Time is : <span id="time"></span> </h1>
+      <p class="lead">This clock is real time clock this clock can show every country time by there time zone.</p>
+      <p>Currently Working on it.</p>
+      <hr class="my-4">
+      <p>you can browse your countries time zone by <a href="#" target="_blank">click here</a></p>
+      <a class="btn btn-primary btn-lg" href="https://github.com/AmanYadav007" role="button">My-Github</a>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script srcw="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script>
+
+    </script>
+  </body>
+
+  <footer class="foot">All &copy; Reserved To Aman-Yadav-2020</footer>
+</html>
